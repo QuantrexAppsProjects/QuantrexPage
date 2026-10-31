@@ -7,6 +7,7 @@ The public website for **QuanTrexApps** (www.quantrexapps.com). Blue Edition, En
 | File | What it is |
 |---|---|
 | `index.html` | The whole site in one file: all pages, styles, scripts, logos and both languages |
+| `assets/portfolio/` | Screenshots for the Portfolio page (WebP) |
 | `CNAME` | Custom domain for GitHub Pages (`www.quantrexapps.com`). Don't delete it. |
 | `README.md` | This file |
 
@@ -20,7 +21,7 @@ The only things loaded from outside are Google Fonts, three.js (for the 3D logo)
 
 ## Pages
 
-Home, Services, Work, Method, Engage, Notes, About and Contact are separate pages inside `index.html`. Each has its own link, for example `https://www.quantrexapps.com/#services`.
+Home, Services, Work, Portfolio, Method, Engage, Notes, About and Contact are separate pages inside `index.html`. Each has its own link, for example `https://www.quantrexapps.com/#services`.
 
 ## Languages (English / Spanish)
 
@@ -30,6 +31,16 @@ Home, Services, Work, Method, Engage, Notes, About and Contact are separate page
   - `ES_TEXT`, a dictionary keyed by the original English HTML. If you edit an English sentence, update its key and its Spanish value, or that sentence will stay in English on the Spanish site.
   - The Spanish arrays in the script: `WORDS` (scrolling strip), `LOGS` (build log), `STMT` (Home statement), `scopesEs` (scope dial), `casesEs` (Work page), `SPEC_EX` (spec compiler examples).
 - Spanish style: Mexican Spanish, informal "tú". Budgets are marked USD.
+
+## Portfolio
+
+The Portfolio page is built from the `PROJECTS` list in the script, so every project uses the same layout: a browser-window frame with the screenshot, a project number, category, description, features, tags and two buttons. Projects alternate sides automatically.
+
+To add a project:
+
+1. Save a desktop screenshot (about 1200px wide) as WebP in `assets/portfolio/`, for example `assets/portfolio/myproject-home.webp`.
+2. Copy the TraduceDoc entry in `PROJECTS` and fill in `name`, `domain`, `url`, `img`, `w` and `h` (the image's width and height in pixels), plus the English and Spanish `alt`, `cat`, `summary`, `feats`, `tags` and `chips`.
+3. Newest or most important project first.
 
 ## Contact form
 
