@@ -51,13 +51,14 @@ Each app's privacy policy has its own permanent link, which is the address to gi
 | App | Link |
 |---|---|
 | All policies | https://www.quantrexapps.com/privacy/ |
+| QClean | https://www.quantrexapps.com/privacy/qclean/ |
 | QWally | https://www.quantrexapps.com/privacy/qwally/ |
 
 To add an app's policy:
 
 1. Copy the `privacy/qwally/` folder and rename it to the app's name in lowercase with no spaces, for example `privacy/myapp/`. Its link becomes `https://www.quantrexapps.com/privacy/myapp/`.
-2. In the new `index.html`, replace the title, description, canonical link, app name, "Last Updated" date, the policy text and the "On this page" list.
-3. Add a card for it in `privacy/index.html` (copy the QWally card).
+2. In the new `index.html`, replace the title, description, canonical link, app name, "Last Updated" date, the app image, the policy text and the "On this page" list. App images live in `assets/portfolio/` (1024×500, WebP).
+3. Add a card for it in `privacy/index.html` (copy an existing card, newest first).
 4. Never rename or delete a policy folder once its link is in a store listing. Update the text and the "Last Updated" date instead.
 
 The main site's footer links to `privacy/`.
