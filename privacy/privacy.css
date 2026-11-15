@@ -84,6 +84,17 @@ h1 .grad,.grad{background:linear-gradient(92deg,var(--cyan),#6FA8FF 55%,var(--vi
 .app .go{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--violet-2)}
 .app .mono{color:var(--cyan)}
 
+
+/* app artwork: hero image on policy pages, thumbnail on the hub */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(24px,4vw,56px);align-items:center}
+.app-art{margin:0;position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line-2);box-shadow:0 30px 80px rgba(3,6,30,.6)}
+.app-art::before{content:"";position:absolute;inset:-30%;z-index:-1;background:radial-gradient(circle,rgba(132,86,255,.45),transparent 60%);filter:blur(30px)}
+.app-art img{display:block;width:100%;height:auto}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.app .thumb{display:block;margin:-26px -26px 6px;border-bottom:1px solid var(--line);overflow:hidden;border-radius:20px 20px 0 0}
+.app .thumb img{display:block;width:100%;height:auto;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.app:hover .thumb img{transform:scale(1.04)}
+
 /* footer */
 footer{border-top:1px solid var(--line);color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:26px calc(26px + env(safe-area-inset-bottom,0px))}
