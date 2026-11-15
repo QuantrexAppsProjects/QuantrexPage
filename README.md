@@ -8,6 +8,8 @@ The public website for **QuanTrexApps** (www.quantrexapps.com). Blue Edition, En
 |---|---|
 | `index.html` | The whole site in one file: all pages, styles, scripts, logos and both languages |
 | `assets/portfolio/` | Screenshots for the Portfolio page (WebP) |
+| `assets/brand/` | Logo mark (SVG) and wordmark (PNG), used by the privacy pages |
+| `privacy/` | App privacy policies: `privacy/index.html` lists them, each app has its own folder, all share `privacy/privacy.css` |
 | `CNAME` | Custom domain for GitHub Pages (`www.quantrexapps.com`). Don't delete it. |
 | `README.md` | This file |
 
@@ -39,8 +41,26 @@ The Portfolio page is built from the `PROJECTS` list in the script, so every pro
 To add a project:
 
 1. Save a desktop screenshot (about 1200px wide) as WebP in `assets/portfolio/`, for example `assets/portfolio/myproject-home.webp`.
-2. Copy the TraduceDoc entry in `PROJECTS` and fill in `name`, `domain`, `url`, `img`, `w` and `h` (the image's width and height in pixels), plus the English and Spanish `alt`, `cat`, `summary`, `feats`, `tags` and `chips`.
+2. Copy the TraduceDoc entry in `PROJECTS` and fill in `name`, `domain`, `url`, `img`, `w` and `h` (the image's width and height in pixels), plus the English and Spanish `alt`, `cat`, `summary`, `feats`, `tags` and `chips`. Optional `cta` sets the main button's text (QWally uses "View on Google Play"); without it the button says "Visit <domain>".
 3. Newest or most important project first.
+
+## Privacy policies
+
+Each app's privacy policy has its own permanent link, which is the address to give the App Store, Google Play and the app's settings screen:
+
+| App | Link |
+|---|---|
+| All policies | https://www.quantrexapps.com/privacy/ |
+| QWally | https://www.quantrexapps.com/privacy/qwally/ |
+
+To add an app's policy:
+
+1. Copy the `privacy/qwally/` folder and rename it to the app's name in lowercase with no spaces, for example `privacy/myapp/`. Its link becomes `https://www.quantrexapps.com/privacy/myapp/`.
+2. In the new `index.html`, replace the title, description, canonical link, app name, "Last Updated" date, the policy text and the "On this page" list.
+3. Add a card for it in `privacy/index.html` (copy the QWally card).
+4. Never rename or delete a policy folder once its link is in a store listing. Update the text and the "Last Updated" date instead.
+
+The main site's footer links to `privacy/`.
 
 ## Contact form
 
