@@ -1181,7 +1181,18 @@ const PROJECTS=[
   feats:{en:['Upload a photo or PDF of the original','Quotes and order tracking','Human review before every delivery','Secure download of the translated copy','Bilingual site in English and Spanish'],
          es:['Sube una foto o un PDF del original','Cotizaciones y seguimiento de pedidos','Revisión humana antes de cada entrega','Descarga segura de la copia traducida','Sitio bilingüe en inglés y español']},
   tags:{en:['Web platform','File upload','Order tracking','Customer accounts','EN / ES'],es:['Plataforma web','Carga de archivos','Seguimiento de pedidos','Cuentas de cliente','EN / ES']},
-  chips:[{en:['Languages','ENG · ESP'],es:['Idiomas','ENG · ESP']},{en:['Review','✓ Every order'],es:['Revisión','✓ Cada pedido']},{en:['Input','Photo · PDF'],es:['Entrada','Foto · PDF']}]}
+  chips:[{en:['Languages','ENG · ESP'],es:['Idiomas','ENG · ESP']},{en:['Review','✓ Every order'],es:['Revisión','✓ Cada pedido']},{en:['Input','Photo · PDF'],es:['Entrada','Foto · PDF']}]},
+ {name:'QWally',domain:'play.google.com',url:'https://play.google.com/store/apps/details?id=com.quantrexapps.qwally&pcampaignid=web_share',img:'assets/portfolio/qwally-feature.webp',w:1024,h:500,
+  cta:{en:'View on Google Play',es:'Ver en Google Play'},
+  alt:{en:'QWally feature graphic with the headline "Turn Memories Into Motion." and three phones showing miniature-world live wallpapers',
+       es:'Imagen destacada de QWally con el titular "Turn Memories Into Motion." y tres teléfonos con fondos animados de mundos en miniatura'},
+  cat:{en:'Android app · Live wallpapers',es:'App Android · Fondos animados'},
+  summary:{en:'An Android app that turns your own videos into 4K live wallpapers, with ready-made collections in Nature, Neon, Abstract and Sci-Fi. No ads and no subscription.',
+           es:'Una app para Android que convierte tus propios videos en fondos de pantalla animados en 4K, con colecciones listas de Naturaleza, Neón, Abstracto y Ciencia ficción. Sin anuncios y sin suscripción.'},
+  feats:{en:['Turn your own videos into live wallpapers','4K quality','Collections: Nature, Neon, Abstract, Sci-Fi','No ads','No subscription'],
+         es:['Convierte tus propios videos en fondos animados','Calidad 4K','Colecciones: Naturaleza, Neón, Abstracto, Ciencia ficción','Sin anuncios','Sin suscripción']},
+  tags:{en:['Android app','Video','Live wallpapers','4K','Google Play'],es:['App Android','Video','Fondos animados','4K','Google Play']},
+  chips:[{en:['Quality','4K live'],es:['Calidad','4K animado']},{en:['Ads','✓ None'],es:['Anuncios','✓ Ninguno']},{en:['Platform','Android'],es:['Plataforma','Android']}]}
 ];
 const LOCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
 function renderPortfolio(){
@@ -1199,7 +1210,7 @@ function renderPortfolio(){
       <p>${esc(p.summary[L])}</p>
       <ul class="pf-feats">${p.feats[L].map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
       <div class="pf-tags">${p.tags[L].map(t=>`<span>${esc(t)}</span>`).join('')}</div>
-      <div class="pf-actions"><a class="btn solid" href="${p.url}" target="_blank" rel="noopener">${T('Visit','Visitar')} ${esc(p.domain)} ↗</a><a class="btn" href="#contact">${T('Start a project like this','Inicia un proyecto así')} →</a></div>
+      <div class="pf-actions"><a class="btn solid" href="${p.url}" target="_blank" rel="noopener">${p.cta?esc(p.cta[L]):T('Visit','Visitar')+' '+esc(p.domain)} ↗</a><a class="btn" href="#contact">${T('Start a project like this','Inicia un proyecto así')} →</a></div>
     </div></article>`).join('');
   drawPfArt();
 }
