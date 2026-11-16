@@ -447,6 +447,8 @@ footer .soc:hover{border-color:var(--cyan);background:var(--panel-2);transform:t
 .pf-tags{display:flex;flex-wrap:wrap;gap:6px}
 .pf-tags span{font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;color:var(--violet-2);border:1px solid var(--line-2);background:var(--panel);border-radius:999px;padding:5px 10px}
 .pf-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.pf-actions .soon{cursor:default;border-style:dashed;color:var(--cyan)}
+.pf-actions .soon:hover{background:var(--panel);transform:none}
 .pf-next{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:14px;margin-top:clamp(72px,10vw,132px);padding:clamp(28px,5vw,56px);text-decoration:none;border-style:dashed;border-color:var(--line-2);transition:border-color .25s,transform .25s,box-shadow .25s}
 .pf-next:hover{border-color:var(--cyan);transform:translateY(-3px);box-shadow:0 24px 60px rgba(20,30,120,.45)}
 .pf-next .art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
@@ -1192,7 +1194,18 @@ const PROJECTS=[
   feats:{en:['Turn your own videos into live wallpapers','4K quality','Collections: Nature, Neon, Abstract, Sci-Fi','No ads','No subscription'],
          es:['Convierte tus propios videos en fondos animados','Calidad 4K','Colecciones: Naturaleza, Neón, Abstracto, Ciencia ficción','Sin anuncios','Sin suscripción']},
   tags:{en:['Android app','Video','Live wallpapers','4K','Google Play'],es:['App Android','Video','Fondos animados','4K','Google Play']},
-  chips:[{en:['Quality','4K live'],es:['Calidad','4K animado']},{en:['Ads','✓ None'],es:['Anuncios','✓ Ninguno']},{en:['Platform','Android'],es:['Plataforma','Android']}]}
+  chips:[{en:['Quality','4K live'],es:['Calidad','4K animado']},{en:['Ads','✓ None'],es:['Anuncios','✓ Ninguno']},{en:['Platform','Android'],es:['Plataforma','Android']}]},
+ {name:'QClean',domain:'play.google.com',url:'',img:'assets/portfolio/qclean-feature.webp',w:1024,h:500,
+  soon:{en:'Coming soon to Google Play',es:'Muy pronto en Google Play'},
+  alt:{en:'QClean feature graphic with the headline "Unlock Premium.", the QClean Premium screen and a robot vacuum mascot',
+       es:'Imagen destacada de QClean con el titular "Unlock Premium.", la pantalla Premium de QClean y una mascota robot con aspiradora'},
+  cat:{en:'Android app · Storage cleaner',es:'App Android · Limpieza de almacenamiento'},
+  summary:{en:'An Android storage cleaner that frees up space on your phone. Premium is a one-time purchase: unlimited cleaning, weekly cleanup reminders and no ads, yours forever with no subscription.',
+           es:'Un limpiador de almacenamiento para Android que libera espacio en tu teléfono. Premium es un pago único: limpieza ilimitada, recordatorios semanales de limpieza y sin anuncios, tuyo para siempre y sin suscripción.'},
+  feats:{en:['Unlimited cleaning','Weekly cleanup reminders','100% ad-free','Lifetime Premium: pay once, yours forever','Purchases handled by Google Play'],
+         es:['Limpieza ilimitada','Recordatorios semanales de limpieza','100% sin anuncios','Premium de por vida: pagas una vez y es tuyo para siempre','Compras gestionadas por Google Play']},
+  tags:{en:['Android app','Storage cleaner','In-app purchase','No ads','Google Play'],es:['App Android','Limpieza de almacenamiento','Compra en la app','Sin anuncios','Google Play']},
+  chips:[{en:['Premium','Pay once'],es:['Premium','Pago único']},{en:['Ads','✓ None'],es:['Anuncios','✓ Ninguno']},{en:['Reminders','Weekly'],es:['Recordatorios','Semanales']}]}
 ];
 const LOCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
 function renderPortfolio(){
@@ -1210,7 +1223,7 @@ function renderPortfolio(){
       <p>${esc(p.summary[L])}</p>
       <ul class="pf-feats">${p.feats[L].map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
       <div class="pf-tags">${p.tags[L].map(t=>`<span>${esc(t)}</span>`).join('')}</div>
-      <div class="pf-actions"><a class="btn solid" href="${p.url}" target="_blank" rel="noopener">${p.cta?esc(p.cta[L]):T('Visit','Visitar')+' '+esc(p.domain)} ↗</a><a class="btn" href="#contact">${T('Start a project like this','Inicia un proyecto así')} →</a></div>
+      <div class="pf-actions">${p.url?`<a class="btn solid" href="${p.url}" target="_blank" rel="noopener">${p.cta?esc(p.cta[L]):T('Visit','Visitar')+' '+esc(p.domain)} ↗</a>`:`<span class="btn soon" aria-disabled="true">${esc((p.soon||{en:'Coming soon',es:'Muy pronto'})[L])}</span>`}<a class="btn" href="#contact">${T('Start a project like this','Inicia un proyecto así')} →</a></div>
     </div></article>`).join('');
   drawPfArt();
 }
