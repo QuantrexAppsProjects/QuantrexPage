@@ -34,6 +34,13 @@ Home, Services, Work, Portfolio, Method, Engage, Notes, About and Contact are se
   - The Spanish arrays in the script: `WORDS` (scrolling strip), `LOGS` (build log), `STMT` (Home statement), `scopesEs` (scope dial), `casesEs` (Work page), `SPEC_EX` (spec compiler examples).
 - Spanish style: Mexican Spanish, informal "tú". Budgets are marked USD.
 
+## Adding a new app (standard routine)
+
+Every new app gets the same two things, from one feature image and one store link:
+
+1. **Privacy policy page** at `https://www.quantrexapps.com/privacy/<app>/`, using the standard policy text with the app's name, plus a card on `privacy/index.html` (newest first). Policy pages have no images.
+2. **Portfolio entry**: the feature image (1024×500, saved as WebP in `assets/portfolio/<app>-feature.webp`) in the browser frame, with category, summary, features, tags and chips in English and Spanish, and a "View on Google Play" button pointing to the store link. Without a link yet, set `url:''` and a `soon` label ("Coming soon to Google Play") and add the link later.
+
 ## Portfolio
 
 The Portfolio page is built from the `PROJECTS` list in the script, so every project uses the same layout: a browser-window frame with the screenshot, a project number, category, description, features, tags and two buttons. Projects alternate sides automatically.
