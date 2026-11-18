@@ -39,7 +39,7 @@ Home, Services, Work, Portfolio, Method, Engage, Notes, About and Contact are se
 Every new app gets the same two things, from one feature image and one store link:
 
 1. **Privacy policy page** at `https://www.quantrexapps.com/privacy/<app>/`, using the standard policy text with the app's name, plus a card on `privacy/index.html` (newest first). Policy pages have no images.
-2. **Portfolio entry**: the feature image (1024×500, saved as WebP in `assets/portfolio/<app>-feature.webp`) in the browser frame, with category, summary, features, tags and chips in English and Spanish, and a "View on Google Play" button pointing to the store link. Without a link yet, set `url:''` and a `soon` label ("Coming soon to Google Play") and add the link later.
+2. **Portfolio entry**: the feature image (1024×500, saved as WebP in `assets/portfolio/<app>-feature.webp`; if you only have phone screenshots, they are combined side by side into one wide image, as for QScan) in the browser frame, with category, summary, features, tags and chips in English and Spanish, and a "View on Google Play" button pointing to the store link. Without a link yet, set `url:''` and a `soon` label ("Coming soon to Google Play") and add the link later.
 
 ## Portfolio
 
@@ -59,6 +59,7 @@ Each app's privacy policy has its own permanent link, which is the address to gi
 |---|---|
 | All policies | https://www.quantrexapps.com/privacy/ |
 | QClean | https://www.quantrexapps.com/privacy/qclean/ |
+| QFactura: Invoice Maker | https://www.quantrexapps.com/privacy/qfactura/ |
 | QScan - PDF Scanner | https://www.quantrexapps.com/privacy/qscan/ |
 | QWally | https://www.quantrexapps.com/privacy/qwally/ |
 
