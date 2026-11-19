@@ -60,6 +60,7 @@ Each app's privacy policy has its own permanent link, which is the address to gi
 | All policies | https://www.quantrexapps.com/privacy/ |
 | QClean | https://www.quantrexapps.com/privacy/qclean/ |
 | QFactura: Invoice Maker | https://www.quantrexapps.com/privacy/qfactura/ |
+| QPlanta – Plant Identifier & Care | https://www.quantrexapps.com/privacy/qplanta/ |
 | QScan - PDF Scanner | https://www.quantrexapps.com/privacy/qscan/ |
 | QWally | https://www.quantrexapps.com/privacy/qwally/ |
 
