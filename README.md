@@ -58,6 +58,7 @@ Each app's privacy policy has its own permanent link, which is the address to gi
 | App | Link |
 |---|---|
 | All policies | https://www.quantrexapps.com/privacy/ |
+| QAgenda: Appointments & Shows | https://www.quantrexapps.com/privacy/qagenda/ |
 | QClean | https://www.quantrexapps.com/privacy/qclean/ |
 | QFactura: Invoice Maker | https://www.quantrexapps.com/privacy/qfactura/ |
 | QPlanta – Plant Identifier & Care | https://www.quantrexapps.com/privacy/qplanta/ |
