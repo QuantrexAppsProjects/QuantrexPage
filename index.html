@@ -1238,7 +1238,18 @@ const PROJECTS=[
   feats:{en:['Point and scan: identify a plant from a camera photo, with a match score','Care guide for each plant: water, light and fertilizer','My Garden: save your plants and see when each one needs water','Watering reminders, with Miel the bee','Premium Lifetime: unlimited identifications, unlimited plants and full care plans, pay once'],
          es:['Apunta y escanea: identifica una planta con una foto de la cámara, con porcentaje de coincidencia','Guía de cuidado para cada planta: riego, luz y abono','Mi jardín: guarda tus plantas y ve cuándo necesita agua cada una','Recordatorios de riego, con Miel la abeja','Premium de por vida: identificaciones ilimitadas, plantas ilimitadas y planes de cuidado completos, pagas una vez']},
   tags:{en:['Android app','Plant identifier','Plant care','Reminders','Google Play'],es:['App Android','Identificador de plantas','Cuidado de plantas','Recordatorios','Google Play']},
-  chips:[{en:['Identify','Point & scan'],es:['Identifica','Apunta y escanea']},{en:['Reminders','Watering'],es:['Recordatorios','Riego']},{en:['Premium','Pay once'],es:['Premium','Pago único']}]}
+  chips:[{en:['Identify','Point & scan'],es:['Identifica','Apunta y escanea']},{en:['Reminders','Watering'],es:['Recordatorios','Riego']},{en:['Premium','Pay once'],es:['Premium','Pago único']}]},
+ {name:'QAgenda: Appointments & Shows',domain:'play.google.com',url:'',img:{en:'assets/portfolio/qagenda-feature-en.webp',es:'assets/portfolio/qagenda-feature-es.webp'},w:1024,h:500,
+  soon:{en:'Coming soon to Google Play',es:'Muy pronto en Google Play'},
+  alt:{en:'QAgenda feature graphic: an "Agenda/Schedule" calendar icon with one day marked, the headline "Know when you\'re free.", the line "Doctor appointments & shows, in one calendar." and "No double-booking · No subscription"',
+       es:'Imagen destacada de QAgenda: un ícono de calendario "Agenda/Schedule" con un día marcado, el titular "Sabe siempre cuándo estás libre.", la frase "Citas de doctores y shows, en un solo calendario." y "Sin doble reserva · Sin suscripción"'},
+  cat:{en:'Android app · Calendar & appointments',es:'App Android · Calendario y citas'},
+  summary:{en:'Know when you\'re free. QAgenda keeps your doctor appointments and your shows in one calendar, so you can see at a glance which days are taken and avoid booking two things at once. No subscription.',
+           es:'Sabe siempre cuándo estás libre. QAgenda junta tus citas con el doctor y tus shows en un solo calendario, para que veas de un vistazo qué días ya están ocupados y no reserves dos cosas a la vez. Sin suscripción.'},
+  feats:{en:['Doctor appointments and shows in one calendar','See at a glance when you\'re free','No double-booking: keep plans from overlapping','No subscription'],
+         es:['Citas con el doctor y shows en un solo calendario','Ve de un vistazo cuándo estás libre','Sin doble reserva: evita que tus planes se encimen','Sin suscripción']},
+  tags:{en:['Android app','Calendar','Appointments','Shows','Google Play'],es:['App Android','Calendario','Citas','Shows','Google Play']},
+  chips:[{en:['Calendar','All in one'],es:['Calendario','Todo en uno']},{en:['Double-booking','✓ None'],es:['Doble reserva','✓ Ninguna']},{en:['Subscription','✓ None'],es:['Suscripción','✓ Ninguna']}]}
 ];
 const LOCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
 function renderPortfolio(){
@@ -1246,7 +1257,7 @@ function renderPortfolio(){
   el.innerHTML=PROJECTS.map((p,i)=>`<article class="pf${i%2?' rev':''}">
     <div class="pf-media"><canvas class="art" aria-hidden="true"></canvas>
       <div class="pf-frame"><div class="pf-bar"><span class="dots"><i></i><i></i><i></i></span><span class="pf-url">${LOCK}${esc(p.domain)}</span><span class="sp"></span></div>
-        <img class="pf-shot" src="${p.img}" width="${p.w}" height="${p.h}" alt="${esc(p.alt[L])}" loading="lazy" decoding="async"></div>
+        <img class="pf-shot" src="${typeof p.img==='string'?p.img:p.img[L]}" width="${p.w}" height="${p.h}" alt="${esc(p.alt[L])}" loading="lazy" decoding="async"></div>
       ${p.chips.map((c,k)=>`<div class="pf-chip glass k${k}">${esc(c[L][0])}<b>${esc(c[L][1])}</b></div>`).join('')}
     </div>
     <div class="pf-body">
