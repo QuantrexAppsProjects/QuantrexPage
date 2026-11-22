@@ -48,7 +48,7 @@ The Portfolio page is built from the `PROJECTS` list in the script, so every pro
 To add a project:
 
 1. Save a desktop screenshot (about 1200px wide) as WebP in `assets/portfolio/`, for example `assets/portfolio/myproject-home.webp`.
-2. Copy the TraduceDoc entry in `PROJECTS` and fill in `name`, `domain`, `url`, `img`, `w` and `h` (the image's width and height in pixels), plus the English and Spanish `alt`, `cat`, `summary`, `feats`, `tags` and `chips`. Optional `cta` sets the main button's text (QWally uses "View on Google Play"); without it the button says "Visit <domain>".
+2. Copy the TraduceDoc entry in `PROJECTS` and fill in `name`, `domain`, `url`, `img`, `w` and `h` (the image's width and height in pixels), plus the English and Spanish `alt`, `cat`, `summary`, `feats`, `tags` and `chips`. If you have one image per language, set `img` to `{en:'…-en.webp',es:'…-es.webp'}` (QAgenda does this). Optional `cta` sets the main button's text (QWally uses "View on Google Play"); without it the button says "Visit <domain>".
 3. Newest or most important project first.
 
 ## Privacy policies
